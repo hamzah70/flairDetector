@@ -1,7 +1,6 @@
 import json
 import requests
 import pandas as pd
-from pymongo import MongoClient 
 import praw
 from praw.models import MoreComments
 
