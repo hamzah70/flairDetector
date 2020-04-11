@@ -28,7 +28,7 @@ def predictFlair(X):
 def recoverPost(url):
 	dataDictionary = {}
 	reddit = praw.Reddit(client_id='I4SSb419kCGNmA', redirect_uri='http://localhost:8080', client_secret='Y7vR4ronY3HdQO75UXokopFB-lc', user_agent='Flair Detector')
-	submission = reddit.submission(url='https://www.reddit.com/r/india/comments/fqqdsg/coronavirus_covid19_megathread_news_and_updates_3/')
+	submission = reddit.submission(url=url)
 	data = []
 
 	dataDictionary['author'] = submission.author
