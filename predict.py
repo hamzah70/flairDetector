@@ -1,8 +1,8 @@
-import praw
-from praw.models import MoreComments
 import pickle
 import pandas as pd
 import dataCollector
+import praw
+from praw.models import MoreComments
 
 def predictFlair(X):
 	trainedModel = ''
