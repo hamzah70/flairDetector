@@ -3,6 +3,8 @@ from flask import request
 from flask import render_template
 import predict
 import os
+from werkzeug import secure_filename
+import json
 
 app = Flask(__name__)
 
@@ -19,6 +21,17 @@ def my_form_post():
 	flairPredicted = predict.recoverPost(url)
 	print(flairPredicted)
 	return render_template('webapp.html', flair = flairPredicted)
+
+@app.route('/automated_testing', methods=['POST'])
+def testing():
+	txtFile = request.files['file']
+	allurl = txtFile.read().decode('utf-8').split('\n')
+	results = {}
+	for url in allurl:
+		flairPredicted = predict.recoverPost(url)
+		results[url] = flairPredicted
+	return json.dumps(results)
+	
 
 
 
