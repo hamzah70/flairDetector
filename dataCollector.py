@@ -248,6 +248,7 @@ def predictModels():
 	with open('Tfidf_Vectorizer.pickle', 'wb') as f:
 		pickle.dump(tfidfList, f)
 
+
 # predictModels()
 
 # dataPraw()
