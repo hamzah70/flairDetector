@@ -1,8 +1,8 @@
 from flask import Flask 
 from flask import request 
 from flask import render_template
-import praw
 import predict
+import os
 
 app = Flask(__name__)
 
@@ -22,7 +22,6 @@ def my_form_post():
 
 
 
-
-
 if __name__ == '__main__':
-	app.run(debug=True)
+	port = int(os.environ.get("PORT", 5000))
+	app.run(debug=True, port=port)
