@@ -24,7 +24,7 @@ def my_form_post():
 
 @app.route('/automated_testing', methods=['POST'])
 def testing():
-	txtFile = request.files['file']
+	txtFile = request.files['upload_file']
 	allurl = txtFile.read().decode('utf-8').split('\n')
 	results = {}
 	for url in allurl:

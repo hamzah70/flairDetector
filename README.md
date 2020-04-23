@@ -1,7 +1,7 @@
 # flairDetector
 
 A Flask based Web Application to predict Reddit Flairs
-The flair predictor app is live at https://reddit-flair-app-predictor.herokuapp.com/
+The flair predictor app is live at https://reddit-india-flair-predictor.herokuapp.com/
 
 ### Development Environment
 To reproduce the code locally run the following command in the particular order
